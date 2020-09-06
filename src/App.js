@@ -11,7 +11,7 @@ function App() {
     selected: {}
   });
   
-  const apiurl = "http://www.omdbapi.com/?i=tt3896198&apikey=b6c59b5c";
+  const apiurl = "https://www.omdbapi.com/?i=tt3896198&apikey=b6c59b5c";
   const search = (e) => {
     if(e.key === "Enter"){
       axios(apiurl + "&s=" + state.s).then(({data})=>{
@@ -33,7 +33,7 @@ function App() {
   }  
 
   const openPopup = (id) =>{
-    let apiUrlPopup = "http://www.omdbapi.com/";
+    let apiUrlPopup = "https://www.omdbapi.com/";
     let apikey = "&apikey=b6c59b5c";
     axios(apiUrlPopup + "?i="+ id + apikey).then(({data}) =>{
       let result = data;
